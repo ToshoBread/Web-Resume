@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Resume</title>
+  </head>
+  <body>
+    <div id="blob-background"></div>
+    <header class="container">
+      <h1>Hi, I'm</h1>
+      <div id="typewriter-wrapper">
+        <h1 id="typewriter-text"></h1>
+      </div>
+    </header>
+    <main class="container-fluid">
+      <article id="profile">
+        <img src="Dionisio_2x2.jpg" alt="Profile Picture" />
+        <p>Name: Zion Nathan Dionisio</p>
+        <p>20 Years old</p>
+        <p>zion.dionisio@neu.edu.ph</p>
+      </article>
+      <article id="accordion">
+        <details>
+          <summary>Personal Information</summary>
+          <p>Birthday: April 18, 2004</p>
+          <p>Nationality: Filipino</p>
+          <p>Citizenship: Filipino</p>
+        </details>
+        <hr />
+        <details>
+          <summary>Education</summary>
+          <p>Tertiary Education: New Era University (2023 - 2027)</p>
+          <p>Bachelor of Science in Information Technology</p>
+          <hr />
+          <p>Secondary Education: New Era University (2017 - 2023)</p>
+          <p>
+            Technical Vocational & Livelihood Track - Information, Communication
+            & Technology Strand
+          </p>
+        </details>
+        <hr />
+        <details>
+          <summary>Skills</summary>
+          <details>
+            <summary>Programming</summary>
+            <ul>
+              <li>Java</li>
+              <li>Python</li>
+              <li>C#</li>
+              <li>Javascript</li>
+            </ul>
+          </details>
+          <hr />
+          <details>
+            <summary>Web Technologies</summary>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SCSS</li>
+              <li>React</li>
+            </ul>
+          </details>
+          <hr />
+          <details>
+            <summary>Tools</summary>
+            <ul>
+              <li>VSCode</li>
+              <li>Intellij IDEA</li>
+              <li>Eclipse</li>
+              <li>Adobe Photoshop</li>
+              <li>Godot</li>
+              <li>Figma</li>
+              <li>Git</li>
+            </ul>
+          </details>
+        </details>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
