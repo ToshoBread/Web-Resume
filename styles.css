@@ -5,6 +5,7 @@
   list-style: none;
   outline: none;
   border: none;
+  text-shadow: 2px 2px 5px black;
 }
 
 html,
@@ -12,11 +13,6 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-}
-
-h1,
-p {
-  text-shadow: 2px 2px 5px black;
 }
 
 #blob-background {
@@ -54,6 +50,7 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  overflow: hidden;
   margin-top: 10%;
 }
 header #typewriter-wrapper {
@@ -62,25 +59,23 @@ header #typewriter-wrapper {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  overflow: hidden;
   padding: 0.5rem 1rem;
 }
 header #typewriter-text {
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  text-shadow: inset 0 0 5px black;
+  text-shadow: 2px 2px 5px black;
   border-right: 0.1em solid white;
-  animation: typewriter 3s steps(20, end) infinite, caret-blink 0.75s steps(20, end) infinite;
+  animation: typewriter 3s steps(15, end) infinite, caret-blink 0.75s steps(20, end) infinite;
 }
 
 @keyframes typewriter {
-  0% {
-    width: 0;
-  }
-  50%, 80% {
+  40%, 80% {
     width: 100%;
   }
-  100% {
+  20%, 100% {
     width: 0;
   }
 }
@@ -92,16 +87,20 @@ header #typewriter-text {
 main {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  align-items: baseline;
+  overflow: hidden;
 }
 main article {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 25vw;
+  width: 50%;
   background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px black;
+}
+@media screen and (max-width: 767px) {
+  main article {
+    width: 100%;
+  }
 }
 main #profile {
   display: flex;
@@ -109,19 +108,18 @@ main #profile {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  overflow: hidden;
   box-shadow: 0 2px 5px black;
 }
 main #profile img {
-  width: 12.5vw;
+  width: 50%;
   border-radius: 100%;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 2px 10px black;
 }
-main #profile p:first-of-type {
-  margin-top: 0.5rem;
-}
-main #accordion {
-  align-self: start;
-  box-shadow: inset 0 0 5px black;
+
+.info-wrapper {
+  box-shadow: inset 0 2px 5px black;
+  padding: 0.5rem;
 }
 
 li {
