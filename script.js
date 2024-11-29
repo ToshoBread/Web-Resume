@@ -1,12 +1,13 @@
 const typewriterText = document.getElementById("typewriter-text");
 const text = ["a Learner", "a Developer", "Zion"];
+const timer = 3000;
 
 // Typewriter text changer animation
 let i = 0;
 var interval = setInterval(() => {
   typewriterText.textContent = text[i];
   i = (i + 1) % text.length;
-}, 3000);
+}, timer);
 
 const blobContainer = document.getElementById("blob-background");
 const minBlobSize = 10;
